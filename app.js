@@ -2,11 +2,8 @@ require('dotenv').config();
 
 const APIController = (function () {
 
-    // const clientId = process.env.CLIENT_ID;
-    // const clientSecret = process.env.CLIENT_SECRET;
-
-    const clientId = "c007adbd0aee47b88aaf07db5152a9e9";
-    const clientSecret = "eefa2b8e9dd04c0a9a0d03a8351d1b70";
+    const clientId = process.env.CLIENT_ID;
+    const clientSecret = process.env.CLIENT_SECRET;
 
     // private methods
     const _getToken = async () => {
