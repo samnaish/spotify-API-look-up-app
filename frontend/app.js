@@ -151,6 +151,9 @@ const UIController = (function () {
             <div class="row col-sm-12 px-0">
                 <label for="artist" class="form-label col-sm-12">By ${artist}:</label>
             </div>
+            <div>
+                <button class="liked__playlist-button">Add to Liked</button>
+            </div>
             `;
 
             detailDiv.insertAdjacentHTML('beforeend', html)
