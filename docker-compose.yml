@@ -8,11 +8,21 @@ services:
     volumes:
       - ./dist/:/usr/share/nginx/html/
     restart: unless-stopped
+    networks:
+      nw:
+        aliases:
+          - web
 
-  mongo:
-    image: 'mongo:3.4.1'
+  postgres:
+    image: postgres
+    volumes:
+    - dbs/var/lib/postgresql/data
     ports:
       - '27017:27017'
-    volumes:
-      - ./db:/var/lib/
     restart: unless-stopped
+    networks:
+      nw:
+        aliases:
+          - postgres
+networks:
+  nw:
