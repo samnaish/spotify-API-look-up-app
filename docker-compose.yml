@@ -13,16 +13,18 @@ services:
         aliases:
           - web
 
-  postgres:
-    image: postgres
+
+  mysql:
+    image: mysql:5.7
     volumes:
-    - dbs/var/lib/postgresql/data
+    - dbs/var/lib/mysql/data
     ports:
       - '27017:27017'
     restart: unless-stopped
     networks:
       nw:
         aliases:
-          - postgres
+          - mysql
+
 networks:
   nw:
